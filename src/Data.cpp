@@ -3,7 +3,7 @@
 //
 
 #include "../include/Data.h"
-
+#include <iterator>
 vector<string> splitBySpace(string &sentence) {
     istringstream iss(sentence);
     return vector<string>{istream_iterator<string>(iss),
