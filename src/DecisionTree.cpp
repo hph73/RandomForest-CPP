@@ -176,7 +176,7 @@ DecisionTree::constructNode(vector<int> &samplesVec,
         vector<int> sampleLeft, sampleRight;
         splitSamplesVec(node->featureIndex, node->threshold, samplesVec,
                         sampleLeft, sampleRight, trainData);
-        if ((sampleLeft.size() < minSamplesLeaf) or
+        if ((sampleLeft.size() < minSamplesLeaf) ||
             (sampleRight.size() < minSamplesLeaf)) {
             node->isLeaf = true;
             node->prob = targetProb;
